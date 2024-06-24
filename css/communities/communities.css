@@ -1,28 +1,95 @@
-/* HEADER */
+/* COMMUNITIES HEADER */
+.lietuvos-logo{
+    width: 13vw;
+}
+header{
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.175) !important;
+    margin-top: 10vh;
+    height: 90vh;
+}
+.carousel-supra {
+    height: auto;
+    min-height: 90vh;
+    background: no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.carousel-text{
+    width: 50%;
+    height: 90vh;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.carousel-text>h3{
+    color: #435053;
+    font-weight: 900;
+    font-size: 2rem;
+}
+.carousel-text>h4{
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: left;
+    line-height: 2em;
+    width: 25vw;
+}
+.btn-maps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 11vw;
+    min-height: 24vh;
+    margin-right: 3em;
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+}
 .btn-maps>span{
     color: white !important;
     font-style: italic;
     text-align: center;
     font-weight: 900;
-    font-size: .5em;
+    font-size: 2rem;
     width: 70%;
     overflow: visible;
     white-space: wrap;
 }
-.lietuvos-logo{
-    width: 13vw;
+.carousel{
+    height: 90vh;
 }
-.carousel-text{
-    margin-top: 3vw;
+.carousel-item {
+    height: 90vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
 }
-.carousel-text>h3{
-    font-size: 2vw;
+.photoby{
+    font-size: 1rem;
 }
+
 
 /* COMMUNITY CAROUSEL */
 .community-carousel{
-    height: 60vh;
+    height: 65vh;
     background-color: #7969af;
+}
+.community-carousel .carousel{
+    height: 60vh;
 }
 .inner-communities{
     z-index: 500;
@@ -30,7 +97,12 @@
     margin-right: auto;
 }
 .item-communities{
-    height: 27vw;
+    height: 60vh;
+}
+.card-deck{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: auto;
 }
 .col-community{
     justify-content: center;
@@ -41,14 +113,20 @@
     font-weight: bold;
     margin: auto;
 }
-.back-img{
+.col-community a{
     position: absolute;
+    z-index: 800;
+    width: 100%;
+}
+
+.back-img{
+    position: relative;
+    margin: 3rem auto;
     z-index: 600;
-    height: 18vw;
     object-fit: contain;
     object-position: center center;
-    left: 0.5vw;
-    top: 4vw;
+    width: 70%;
+    height: auto;
 }
 .back1{
     transform: rotate(90deg);
@@ -65,10 +143,12 @@
     -o-transform: rotate(180deg);
 }
 .top-img{
-    position: absolute;
+    position: relative;
     z-index: 700;
-    height: 13vw;
     width: 13vw;
+    height: 13vw;
+    top: 1rem;
+    left: 20%;
     object-fit: cover;
     object-position: center center;
     border-radius: 100%;
@@ -76,47 +156,242 @@
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
-    left: 7vw;
-    top: 6.5vw;
+}
+.comm1 .back-img{
+    width: 20%;
+    height: auto;
 }
 .comm1 .top-img{
-    left: 34vw;
+    left: 42%;
+    width: 13vw;
+    height: 13vw;
+}
+.comm2 .back-img{
+    width: 50%;
+    height: auto;
 }
 .comm2 .top-img{
-    left: 13.5vw;
+    left: 29%;
+    width: 15vw;
+    height: 15vw;
 }
 .btn-header{
     height: 100%;
 }
 
-
-/* EVENTS */
-.section-events{
-    margin: 6vw auto;
-}
-.card-header{
-    height: 5vw;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px){
-    /* Header Mobile */
+@media (min-width: 2001px){
+    .carousel-text{
+        padding-left: 5rem;
+    }
     .carousel-text>h3{
-        margin-top: 4vw;
-      color: white;
-      font-weight: 900;
-      font-size: 10vw;
+        font-size: 4rem;
+    }
+    .carousel-text>h4{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    /* CAROUSEL COMMUNITIES */
+    .community-name{
+        font-size: 2.5rem;
+    }
+    .top-img{
+        top: 3rem;
+    }
+    .comm2 .back-img{
+        width: 16vw;
+        height: 16vw;
+    }
+    .comm2 .top-img{
+        width: 12vw;
+        height: 12vw;
+        left: 33%;
+    }
+}
+@media (max-width: 2000px) and (min-width: 1441px){
+    .carousel-text h3{
+        font-size: 4rem;
+    }
+}
+@media (max-width: 1440px){
+    .carousel-text h3{
+        font-size: 2rem;
+    }
+    .carousel-text h4{
+        font-size: 1rem;
     }
     .btn-maps{
-      position: absolute;
-      top: 40%;
-      left: -10%;
-      min-width: 90vw;
+        min-height: 20vh;
+    }
+    .community-name{
+        font-size: 1rem;
+    }
+    .comm2 .back-img{
+        width: 16vw;
+        height: 16vw;
+    }
+    .comm2 .top-img{
+        width: 12vw;
+        height: 12vw;
+        left: 32%;
+    }
+}
+@media (max-width: 1024px){
+    .btn-container{
+        margin: 0;
+    }
+    .btn-maps{
+        margin-right: 0;
+        justify-content: center;
+    }
+    .btn-maps>span{
+        font-size: 1.5rem;
+    }
+    .carousel-text{
+        justify-content: space-evenly;
+        padding-top: 0;
+        padding-left: 2rem;
+    }
+    .community-name{
+        font-size: 1rem;
+    }
+    .back-img{
+        margin: 3rem auto;
+        z-index: 600;
+        width: 90%;
+    }
+    .top-img{
+        width: 14vw;
+        height: 14vw;
+        top: 2rem;
+        left: 17%;
+    }
+    .comm1 .back-img{
+        width: 25%;
+    }
+    .comm1 .top-img{
+        left: 41%;
+        top: 1rem;
+        width: 15vw;
+        height: 15vw;
+    }
+    .comm2 .back-img{
+        width: 60%;
+        height: auto;
+    }
+    .comm2 .top-img{
+        left: 28%;
+        top: 1.5rem;
+        width: 15vw;
+        height: 15vw;
+    }
+}
+@media (max-width: 991.98px){
+    .carousel-supra-banner {
+        width: 100vw;
+    }
+    .active-citizens-logo{
+        position: relative;
+        z-index: 10;
+        width: 30vw;
+        height: auto;
+        margin: 1.5em 0 0 0.5em;
+    }
+    .carousel-text{
+        width: 50%;
+        height: 90vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+    .carousel-text>h2{  
+        color: #435053;
+        font-weight: 900;
+        font-size: 5vw;
+    }
+    .carousel-text-title{
+        color: #435053;
+    }
+    .carousel-inner{
+        width: 100%;
+    }
+    .carousel-text>h3{
+        color: #435053;
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    .carousel-text>h4{
+        color: #435053;
+        font-weight: 600;
+        font-size: 2vh;
+    }
+    .btn-container{
+        padding-top: 0;
+        align-items: center;
+    }
+    .btn-container h4{
+        font-size: 2vw;
+        padding-right: 1em;
+        margin: 0;
+    }
+    .btn-maps{
+        min-width: 13vw;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        background: url("./home/MAP_EN.png") no-repeat center center;
+        background-size: contain;
+        margin-right: 0.5em;
+    }
+    .carousel-item {
+        height: 100vh;
+        min-height: 300px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+        z-index: -1;
+    }
+    .photoby{
+        font-size: 1rem;
+        color: rgba(255,255,255, 0.5);
+    }
+    .photoby-banner{
+        position: absolute;
+        z-index: 5000;
+        margin-top: -33vh;
+        margin-left: 31vw;
+        font-size: 1.25vw;
+        color: rgb(221, 221, 221);
+    }
+}
+@media (max-width: 767.98px){
+    .carousel-text{
+        width: 100%;
+    }
+    .carousel-text h2{
+        color: white;
+        width: 85%;
+    }
+    .carousel-text h3{
+        margin-top: 4vw;
+        color: white;
+        font-weight: 900;
+        font-size: 10vw;
+    }
+    .btn-maps{
+        min-width: 5rem;
+        height: 11rem;
+        width: 80%;
+        margin-bottom: 6rem;
     }
     .community-carousel{
-        height: 90vw;
+        height: 80vw;
         background-color: #7969af;
+    }
+    .community-carousel .carousel{
+        height: 100%;
     }
     .inner-communities{
         z-index: 500;
@@ -138,28 +413,16 @@
         margin: auto;
     }
     .back-img{
-        position: absolute;
-        z-index: 600;
-        height: 40vw;
-        object-fit: contain;
-        object-position: center center;
-        left: 0.5vw;
-        top: 18vw;
+        width: 50vw;
+        height: auto;
+        top: 3rem;
+        margin: auto;
     }
     .top-img{
-        position: absolute;
-        z-index: 700;
-        left: 22vw;
-        top: 23vw;
-        height: 30vw;
-        width: 30vw;
-        object-fit: cover;
-        object-position: center center;
-        border-radius: 100%;
-        -webkit-border-radius: 100%;
-        -moz-border-radius: 100%;
-        -ms-border-radius: 100%;
-        -o-border-radius: 100%;
+        height: 40vw;
+        width: 40vw;
+        top: 3.5rem;
+        left: 22%;
     }
     .card-header{
         height: 100%;
@@ -167,5 +430,35 @@
     .btn-header{
         height: 100%;
     }
-    
+}
+@media (max-width: 426px){
+    .carousel-text h2{
+        font-size: 1.5rem;
+    }
+    .card-deck{
+        margin-top: 2rem;
+    }
+    .back-img{
+        width: 50vw;
+        height: auto;
+        top: 2.5rem;
+        margin: auto;
+    }
+    .top-img{
+        height: 40vw;
+        width: 40vw;
+        top: 3.25rem;
+        left: 18%;
+    }
+}
+@media (max-width: 320px){
+    .card-deck {
+        margin-top: 1.5rem;
+    }
+    .back-img {
+        top: 1rem;
+    }
+    .top-img{
+        top: 2.5rem;
+    }
 }
